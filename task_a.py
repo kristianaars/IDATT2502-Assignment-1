@@ -34,7 +34,7 @@ model = LinearRegressionModel()
 
 # Optimize: adjust W and b to minimize loss using stochastic gradient descent
 optimizer = torch.optim.SGD([model.W, model.b], 0.00015)
-for epoch in range(100000):
+for epoch in range(80000):
     model.loss(x_train, y_train).backward()  # Compute loss gradients
     optimizer.step()  # Perform optimization by adjusting W and b,
     # similar to:
